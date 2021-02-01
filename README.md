@@ -5,4 +5,5 @@ using the modern design patterns such as bridge, command and composite and MVVM 
 
 
 Presentation Video: https://youtu.be/HHmSaIBHxGI
+
 Teammate github: https://github.com/Daniel-Ely
