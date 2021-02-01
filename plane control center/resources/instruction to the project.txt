@@ -1,0 +1,50 @@
+_Welcome to plane control center.
+In this application you will be able to control a plane from the FlightGear 2018.3.5
+The plane's control center is divided into three main parts.
+In this guider you will learn how to use each part of the plane control center in order to make the plane fly.
+========================================================================================================================
+_the first part (the left one) includes the settings buttons and the area map.
+*connect button: (use this button after you opened the FlightGear program and clicked on the fly button) 
+after the connect button was pressed, you need to enter the ip address and the port number of the server
+that was opened in the FlightGear program.
+*load data button:
+after the load data button was pressed, you need to choose the csv file that includes the data of the start
+coordinates of the map(in the first line), 
+the area of one cell [km^2] (in the second  line) and the height values of each cell.
+*calculate path button:
+after the calculate path button was pressed, you need to enter the ip address and the port number of the
+calculate path server
+( the background server).
+*map:
+the map represent the area of the file that was loaded, the plane icon will appear in the place from the
+FlightGear program.
+clicking on a specific spot on the map will place an X icon that represent the destination place.
+if you already connected to a calculate path server, the lowest way (in aspect of height) will appear on
+the map.
+========================================================================================================================
+_the second part (the middle one) includes the autopilot.
+*code text area:
+in this text area you need to write or load the autopilot code (just bind the vars and implement the
+autopilot algorithm).
+*load text button:
+after the load text button was pressed, you need to choose the text file that includes the autopilot code
+(this action will replace the current text in the code text area).
+*interpret button:
+after the interpret button was pressed, the code in the code text area will be interpreted
+(the autopilot must be marked in order to interpret the code).
+========================================================================================================================
+_the third part (the right one) includes the manual flight system.
+*flight system:
+the flight system includes a jostick and scrollbars to control the aileron, elevator, throttle and the rudder
+of the plane manually
+(the manual must be marked in order to control the plane manually).
+========================================================================================================================
+_order of actions:
+1) open the plane control center.
+2) open the FlightGear program.
+3) while the FlightGear program is loaded, you can load the map, the code data and connect to
+    the calculate path server.
+4) after the FlightGear program ready connect to the server that was opened in it.
+========================================================================================================================
+_now you can start to make your plane flight.
+_enjoy and good luck.
