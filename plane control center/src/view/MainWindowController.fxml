@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+ <?import view.Map?>
+<?import view.Joystick?>
+<!-- This is a comment -->
+
+<BorderPane maxHeight="400.0" maxWidth="900.0" minHeight="400.0" minWidth="930.0" prefHeight="400.0" prefWidth="900.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainWindowController">
+   <top>
+      <HBox maxHeight="400.0" maxWidth="900.0" minHeight="400.0" minWidth="900.0" prefHeight="400.0" prefWidth="900.0" spacing="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox maxHeight="400.0" maxWidth="300.0" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" spacing="20.0">
+               <children>
+                  <HBox maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnConnect" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnConnectPressed" prefHeight="40.0" prefWidth="71.0" style="-fx-background-color: White;" text="Connect">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="btnLoad" maxHeight="40.0" maxWidth="86.0" minHeight="40.0" minWidth="86.0" mnemonicParsing="false" onAction="#btnLoadPressed" prefHeight="40.0" prefWidth="86.0" style="-fx-background-color: White;" text="Load Data">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="btnPath" maxHeight="40.0" maxWidth="113.0" minHeight="40.0" minWidth="113.0" mnemonicParsing="false" onAction="#btnPathPressed" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: White;" text="Calculate Path">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               
+			<Map  fx:id="m"  height="290.0" width="290.0" BorderPane.alignment="CENTER"  imgX="./resources/X.png">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Map>
+               
+               </children></VBox>
+            <VBox maxHeight="400.0" maxWidth="260.0" minHeight="400.0" minWidth="260.0" prefHeight="400.0" prefWidth="260.0" spacing="20.0">
+               <children>
+                  <RadioButton fx:id="radioAuto" maxHeight="31.0" maxWidth="161.0" minHeight="31.0" minWidth="161.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="161.0" text="Autopilot" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="radio" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                       <TextArea fx:id="txtArea" maxHeight="230.0" maxWidth="260.0" minHeight="230.0" minWidth="260.0" prefHeight="230.0" prefWidth="260.0" />
+                        <Label contentDisplay="TOP" maxHeight="168.0" maxWidth="120.0" minHeight="168.0" minWidth="120.0" prefHeight="168.0" prefWidth="120.0" rotate="90.0" text="🡄 throttle 🡆" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets top="110.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="35.0" top="55.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                 <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnLoadText" maxHeight="40.0" maxWidth="113.0" minHeight="40.0" minWidth="113.0" mnemonicParsing="false" onAction="#btnTextPressed" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: White;" text="Load Text">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnSave" maxHeight="40.0" maxWidth="113.0" minHeight="40.0" minWidth="113.0" mnemonicParsing="false" onAction="#btnSavePressed" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: White;" text="Interpret">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="35.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children></VBox>
+            <VBox maxHeight="400.0" maxWidth="260.0" minHeight="400.0" minWidth="260.0" prefHeight="400.0" prefWidth="260.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="radioManual" maxHeight="31.0" maxWidth="120.0" minHeight="31.0" minWidth="120.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="202.0" text="Manual" textFill="WHITE" toggleGroup="$radio">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin></RadioButton>
+                  <Label maxHeight="23.0" maxWidth="134.0" minHeight="23.0" minWidth="134.0" prefHeight="23.0" prefWidth="134.0" text="🡄 aileron 🡆" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="65.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox maxHeight="200.0" maxWidth="260.0" minHeight="200.0" minWidth="260.0" prefHeight="200.0" prefWidth="260.0" spacing="10.0">
+                     <children>
+                        <ScrollBar fx:id="scrollBarStands" max="1.0" maxHeight="200.0" maxWidth="14.0" min="0.0" minHeight="200.0" minWidth="14.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="14.0" rotate="180.0" />
+
+                              <Joystick fx:id = "j" height="200.0" width="200.0" rwPercent="15.0" rhPercent="15.0"/>
+
+
+                              <Label contentDisplay="TOP" maxHeight="168.0" maxWidth="120.0" minHeight="168.0" minWidth="120.0" prefHeight="168.0" prefWidth="120.0" rotate="90.0" text="🡄 elevator 🡆" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets top="110.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <ScrollBar fx:id="scrollBarLays" max="1.0" maxHeight="14.0" maxWidth="200.0" min="-1.0" minHeight="14.0" minWidth="200.0" prefHeight="14.0" prefWidth="200.0" value="0">
+                     <VBox.margin>
+                        <Insets left="24.0" />
+                     </VBox.margin>
+                  </ScrollBar>
+                  <Label maxHeight="23.0" maxWidth="134.0" minHeight="23.0" minWidth="134.0" prefHeight="23.0" prefWidth="134.0" text="🡄 rudder 🡆" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></VBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
